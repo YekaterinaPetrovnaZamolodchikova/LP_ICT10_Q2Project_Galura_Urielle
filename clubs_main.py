@@ -30,7 +30,7 @@ clubs_data = {
     }
 }
 
-def show_club_info():
+def show_club_info(event):
     selected_club = document.getElementById("club-dropdown").value
     
     if selected_club == "":
