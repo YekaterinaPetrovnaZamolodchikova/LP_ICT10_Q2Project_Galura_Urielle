@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+        <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+        h1{
+            color: #000000;
+            font-weight: bold;
+            text-align: center;
+        }
+        body{
+            background-color: #ffffff;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #000000;
+        }
+        .display{
+            display: flex;
+            margin-left: 15px;
+        }
+        .label-style{
+            width: 170px;
+            text-align: center;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        p {
+            margin: 2px;
+        }
+        .container{
+            border: 1px solid #b82626;
+            padding: 20px;
+            width: 550px;
+            background-color: #ffffff;
+            border-radius: 20px;
+        }
+        button{
+            width: 500px;
+            padding: 10px;
+            background-color: #b82626;
+            color: white;
+            border-radius: 13px;
+            border: none;
+        }
+        .nav{
+            background-color: #550f0f;
+            width: 1550px;
+            padding: 10px;
+            color: #b82626;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand{
+            color: #ffffff !important;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .navbar-nav{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+        }
+        .nav-item{
+            margin: 0;
+        }
+        .nav-link{
+            color: #ffffff !important;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .nav-link:hover{
+            color: #b82626 !important;
+        }
+        #first, #last {
+            width: 500px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="nav">
+            <a class="navbar-brand" href="index.html">Grade Calculator</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sw2.html">Grade Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clubs.html">Clubs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+    <bold><h1>Grade Calculator</h1></bold>
+            <div class="cont-2 col-md-6">
+                    <div class="mb-3">
+                        <label for="customer" class="label-style form-label">First Name:</label>
+                        <input type="text" class="form-control" id="first" placeholder="ex. Juan">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="label-style form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="last" placeholder="ex. Dela Cruz">
+                    </div>
+                </div>
+            <div class="cont-2 col-md-6">
+                <h3 class="custom-text mb-3">Grades per Subject</h3>
+                <div class="display">
+                <div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">English:</label>
+                        <input type="number" class="form-control" id="english" placeholder="ex. 90">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">Math:</label>
+                        <input type="number" class="form-control" id="math" placeholder="ex. 90">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">Science:</label>
+                        <input type="number" class="form-control" id="science" placeholder="ex. 90">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">SS:</label>
+                        <input type="number" class="form-control" id="ss" placeholder="ex. 90">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">Filipino:</label>
+                        <input type="number" class="form-control" id="filipino" placeholder="ex. 90">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">ICT:</label>
+                        <input type="number" class="form-control" id="ict" placeholder="ex. 90">
+                    </div>
+                </div>
+            </div>
+    </div> 
+    <br>
+    <button py-click="compute_average">Calculate GWA</button>
+    <br>
+    <br>
+<div class="display">  
+    <div id="grades_container" style="width: 280px; margin-right: 10px; display: none;" class="container">
+        <p>English: <span id="english_output"></span></p>
+        <p>Math: <span id="math_output"></span></p>
+        <p>Science: <span id="science_output"></span></p>
+        <p>SS: <span id="ss_output"></span></p>
+        <p>Filipino: <span id="filipino_output"></span></p>
+        <p>ICT: <span id="ict_output"></span></p>
+    </div>
+
+    <div>
+        <br>
+        <div id="name"></div>
+        <br>
+        <div id="output"></div>
+    </div>
+</div>
+</div>
+        <script type="py" src="sw2.py"></script>
+</body>
+</html>

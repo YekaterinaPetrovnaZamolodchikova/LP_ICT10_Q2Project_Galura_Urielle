@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galura Academy - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+        h1{
+            color: #b82626;
+            font-weight: bold;
+            text-align: center;
+        }
+        h2{
+            color: #b82626;
+            font-weight: bold;
+        }
+        body{
+            background-color: #ffffff;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #000000;
+        }
+        .container{
+            border: 1px solid #b82626;
+            padding: 20px;
+            width: 900px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .nav{
+            background-color: #550f0f;
+            width: 1550px;
+            padding: 10px;
+            color: #b82626;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand{
+            color: #ffffff !important;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .navbar-nav{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+        }
+        .nav-item{
+            margin: 0;
+        }
+        .nav-link{
+            color: #ffffff !important;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .nav-link:hover{
+            color: #b82626 !important;
+        }
+        button{
+            padding: 10px 30px;
+            background-color: #b82626;
+            color: white;
+            border-radius: 13px;
+            border: none;
+            margin-top: 15px;
+        }
+        button:hover{
+            background-color: #550f0f;
+        }
+        .about-section{
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .about-text{
+            flex: 1;
+        }
+        .about-image{
+            width: 300px;
+            height: 250px;
+            background-color: #f0f0f0;
+            border: 2px solid #b82626;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666666;
+        }
+        .more-text{
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="nav">
+            <a class="navbar-brand" href="index.html">Galura Academy</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sw2.html">Grade Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clubs.html">Clubs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Galura Academy</h1>
+        <br>
+        <h2>About Our School</h2>
+        <div class="about-section">
+            <div class="about-text">
+                <!-- Description is made with ChatGPT -->
+                <p>Galura Academy is a leading educational institution committed to excellence in education and character development. We provide a nurturing environment where students can grow academically, socially, and personally. Our dedicated faculty and modern facilities ensure that every student receives the best possible education.</p>
+                <details>
+                    <summary>Read More</summary>
+                    <p>Founded with a vision to shape future leaders, Galura Academy offers a comprehensive curriculum that balances academic rigor with extracurricular activities. Our students benefit from small class sizes, personalized attention, and a wide range of programs designed to develop critical thinking, creativity, and leadership skills.</p>
+                    <p>We believe in fostering a community where respect, integrity, and excellence are valued. Our commitment to innovation and continuous improvement ensures that our students are well-prepared for the challenges of tomorrow.</p>
+                </details>
+            </div>
+            <div class="about-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Phillips_Exeter_Academy_building1.jpg/1200px-Phillips_Exeter_Academy_building1.jpg" alt="School Building" width="280" height="230"> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

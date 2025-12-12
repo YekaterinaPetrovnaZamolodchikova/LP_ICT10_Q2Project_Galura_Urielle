@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galura Academy - Clubs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+        h1{
+            color: #b82626;
+            font-weight: bold;
+            text-align: center;
+        }
+        h2{
+            color: #b82626;
+            font-weight: bold;
+        }
+        body{
+            background-color: #ffffff;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #000000;
+        }
+        .container{
+            border: 1px solid #b82626;
+            padding: 20px;
+            width: 900px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .nav{
+            background-color: #550f0f;
+            width: 1550px;
+            padding: 10px;
+            color: #b82626;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand{
+            color: #ffffff !important;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .navbar-nav{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+        }
+        .nav-item{
+            margin: 0;
+        }
+        .nav-link{
+            color: #ffffff !important;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .nav-link:hover{
+            color: #b82626 !important;
+        }
+        button{
+            padding: 10px 30px;
+            background-color: #b82626;
+            color: white;
+            border-radius: 13px;
+            border: none;
+            margin-top: 15px;
+        }
+        button:hover{
+            background-color: #550f0f;
+        }
+        .club-selector{
+            margin-top: 20px;
+        }
+        .club-selector select{
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #b82626;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .club-info{
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #b82626;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .club-info p{
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .club-info strong{
+            color: #b82626;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="nav">
+            <a class="navbar-brand" href="index.html">Galura Academy</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sw2.html">Grade Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clubs.html">Clubs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Student Clubs</h1>
+        <br>
+        
+        <h2>Select a Club</h2>
+        <div class="club-selector">
+            <select id="club-dropdown">
+                <option value="">Choose a Club</option>
+                <option value="dance">Dance Club</option>
+                <option value="cooking">Cooking Club</option>
+                <option value="literature">Literature Club</option>
+            </select>
+        </div>
+
+        <button py-click="show_club_info">Show Club Information</button>
+
+        <div id="club-info" class="club-info">
+            <p><strong>Club Name:</strong> <span id="club-name"></span></p>
+            <p><strong>Description:</strong> <span id="club-description"></span></p>
+            <p><strong>Meeting Time:</strong> <span id="club-meeting"></span></p>
+            <p><strong>Location:</strong> <span id="club-location"></span></p>
+            <p><strong>Teacher Advisor:</strong> <span id="club-teacher"></span></p>
+            <p><strong>Number of Members:</strong> <span id="club-members"></span></p>
+            <p><strong>Category:</strong> <span id="club-category"></span></p>
+        </div>
+    </div>
+
+    <script type="py" src="clubs_main.py"></script>
+</body>
+</html>
